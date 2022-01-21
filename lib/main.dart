@@ -52,7 +52,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
       ),
       body: SafeArea(
         child: Container(
-                fit: BoxFit.cover,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/squad.jpg'),

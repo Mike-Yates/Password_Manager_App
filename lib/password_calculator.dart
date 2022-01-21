@@ -56,6 +56,5 @@ String calculatePassword(String pin, String keyword){
   password = password.substring(0, sha_first_ascii) + capital_letter + password.substring(sha_first_ascii);
   password = password.substring(0, sha_second_ascii) + special_char + password.substring(sha_second_ascii);
 
-  print(password.substring(0, 0));
   return password;
 }
