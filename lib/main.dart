@@ -65,7 +65,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.black.withOpacity(0.5),
                   ),
               ),
               Padding(
@@ -82,12 +82,12 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   ),
                 ),
               ),
-              SizedBox(height: 50.0),
+              SizedBox(height: 40.0),
               Text('Type Key (Case Sensitive)',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.black.withOpacity(0.5),
                 ),
               ),
               Padding(
