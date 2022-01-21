@@ -9,6 +9,8 @@ String calculatePassword(String pin, String keyword){
     return 'Your pin was not 4 digits long. Please try again.';
   } else if(int.tryParse(pin) == null){
     return 'Your pin was not numeric. Please try again.';
+  } else if(int.parse(pin) < 0){
+    return 'Stop trying to break my app (no negative pins!)';
   } else if(keyword.isEmpty){
     return 'Enter a valid keyword';
   }
