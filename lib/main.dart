@@ -40,15 +40,12 @@ class _MyCustomFormState extends State<MyCustomForm> {
     super.dispose();
   }
 
-  //String calculatePassword(String keyword, String pin){
-  //  return keyword + pin;
-  //}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Apartment 10 Password Manager', textAlign: TextAlign.center),
+        backgroundColor: Colors.teal[800],
       ),
       body: SafeArea(
         child: Container(
@@ -63,9 +60,10 @@ class _MyCustomFormState extends State<MyCustomForm> {
               SizedBox(height: 20.0),
               Text('Type Pin (4 digits)',
                   style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.black.withOpacity(0.5),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.black.withOpacity(0.5),
+                    fontSize: 16,
                   ),
               ),
               Padding(
@@ -79,7 +77,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                       color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.teal[800],
                     ),
                   ),
                 ),
@@ -90,6 +88,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   backgroundColor: Colors.black.withOpacity(0.5),
+                  fontSize: 16,
                 ),
               ),
               Padding(
@@ -103,7 +102,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                       color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.teal[800],
                     ),
                   ),
                 ),
@@ -121,6 +120,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
       floatingActionButton: FloatingActionButton(
         // When the user presses the button, show an alert dialog containing
         // the text that the user has entered into the text field.
+        backgroundColor: Colors.teal[800],
         onPressed: () {
           showDialog(
             context: context,
@@ -130,7 +130,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 content: Text(calculatePassword(myController.text, myController2.text)),
                 actions: [
                   TextButton(onPressed: (){
-                    Clipboard.setData(ClipboardData(text: calculatePassword(myController.text, myController2.text)));
+                      Clipboard.setData(ClipboardData(text: calculatePassword(
+                          myController.text, myController2.text)));
                   }, child: Text('Copy to clipboard')),
                 ],
               );
