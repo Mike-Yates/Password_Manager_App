@@ -6,13 +6,15 @@ import 'dart:convert'; // for the utf8.encode method
 String calculatePassword(String pin, String keyword){
   // input checking
   if(pin.length != 4){
-    return 'Your pin was not 4 digits long. Please try again.';
+    return 'Invalid pin';
   } else if(int.tryParse(pin) == null){
-    return 'Your pin was not numeric. Please try again.';
+    return 'Invalid pin';
   } else if(int.parse(pin) < 0){
     return 'Stop trying to break my app (no negative pins!)';
+  } else if(pin.substring(3,4) == ' '){
+    return 'Invalid pin';
   } else if(keyword.isEmpty){
-    return 'Enter a valid keyword';
+    return 'Invalid keyword';
   }
 
   var bytes1 = utf8.encode(pin+keyword);  // data being hashed
