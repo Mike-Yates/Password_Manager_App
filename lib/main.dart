@@ -48,15 +48,16 @@ class _MyCustomFormState extends State<MyCustomForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Yates/Logan - Password Manager'),
+        title: const Text('Apartment 10 Password Manager', textAlign: TextAlign.center),
       ),
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/squad.jpg'),
                 fit: BoxFit.cover,
-              )
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/squad.jpg'),
+              fit: BoxFit.cover,
+            )
           ),
           child: Column(
             children: <Widget>[
@@ -73,9 +74,11 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 child: Container(
                   color: Colors.white.withOpacity(0.5),
                   child: TextField(
+                    textAlign: TextAlign.center,
                     controller: myController,
                     style: TextStyle(
                       color: Colors.white,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                       backgroundColor: Colors.blue,
                     ),
@@ -95,9 +98,11 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 child: Container(
                   color: Colors.white.withOpacity(0.5),
                   child: TextField(
+                    textAlign: TextAlign.center,
                     controller: myController2,
                     style: TextStyle(
                       color: Colors.white,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                       backgroundColor: Colors.blue,
                     ),
