@@ -6,7 +6,10 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+<<<<<<< HEAD
 //github test**
+=======
+>>>>>>> Justin-branch
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+//branch test
 // Define a custom Form widget.
 class MyCustomForm extends StatefulWidget {
   const MyCustomForm({Key? key}) : super(key: key);
